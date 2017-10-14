@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us - The Mind Blog (Assignment 1 - i253 Web Arch)</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <a href="/index.html">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a>
+            <hr>
+        </header>
+        
+        <div id="notification">
+        </div>
+        
+        <div id="email_notification">
+                {% for notification in notifications %}
+                {{ notification }}
+                {% endfor %}
+        </div>
+        
+        <h2>Do you have feedback or questions?</h2>
+        <p>Send me a message</p>
+
+        <form id="contact_form" action="/email" method="post" onsubmit="event.preventDefault(); return validateForm();">
+            <label for="input_name">Name</label>
+            <input type="text" name="Name" id="input_name" size="40" autofocus>
+            
+            <label for="input_email">Email</label>
+            <input type="text" name="Email" id="input_email" size="40">
+            
+            <label for="input_subj">Subject</label>
+            <input type="text" name="Subject" id="input_subj" size="40">
+            
+            <label for="input_msg">Message</label>
+            <textarea rows="4" cols="42" name="Message" id="input_msg"></textarea>
+            
+            <br>
+            <input type="submit" name="input_submit">
+        </form>
+        <script src="/static/script.js"></script>
+        <footer>
+            <hr>
+            <a href="/index.html">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a>
+        </footer>
+    </body>
+</html>
+

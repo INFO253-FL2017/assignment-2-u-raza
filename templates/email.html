@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us - The Mind Blog (Assignment 1 - i253 Web Arch)</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <a href="/index.html">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a>
+            <hr>
+        </header>
+
+        <ul>
+            {% for notification in notifications %}
+            <li>{{ notification }}</li>
+            {% endfor %}
+        </ul>
+        
+        <footer>
+            <hr>
+            <a href="/index.html">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a>
+        </footer>
+    </body>
+</html>
+
